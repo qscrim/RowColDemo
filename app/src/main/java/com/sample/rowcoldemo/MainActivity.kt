@@ -13,7 +13,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.sample.rowcoldemo.ui.theme.RowColDemoTheme
 import androidx.compose.foundation.border
-import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.*
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
@@ -33,7 +32,14 @@ fun TextCell(text: String, modifier: Modifier = Modifier) {
         textAlign = TextAlign.Center)
 }
 @Composable
-fun MainScreen(modifier: Modifier = Modifier) = Unit
+fun MainScreen(modifier: Modifier = Modifier) {
+    Row(modifier) {
+        TextCell("1")
+        TextCell("2")
+        TextCell("3")
+    }
+}
+
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
