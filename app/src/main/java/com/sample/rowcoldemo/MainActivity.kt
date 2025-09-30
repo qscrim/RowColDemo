@@ -33,12 +33,13 @@ fun TextCell(text: String, modifier: Modifier = Modifier) {
 }
 @Composable
 fun MainScreen(modifier: Modifier = Modifier) {
-    Row(modifier) {
+    Column(modifier) {
         TextCell("1")
         TextCell("2")
         TextCell("3")
     }
 }
+
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
